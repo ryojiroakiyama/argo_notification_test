@@ -6,7 +6,7 @@ metadata:
   labels:
     app.kubernetes.io/part-of: argo-notify-cron-demo
 spec:
-  schedule: "*/2 * * * *"               # 2分おき（Cron 形式）:contentReference[oaicite:1]{index=1}
+  schedule: "0 0 1 1 *"               #  1年おき（Cron 形式）:contentReference[oaicite:1]{index=1}
   concurrencyPolicy: Forbid             # 前回が残っていたら次回をスキップ :contentReference[oaicite:2]{index=2}
   successfulJobsHistoryLimit: 1
   failedJobsHistoryLimit: 1
